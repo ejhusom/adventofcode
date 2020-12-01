@@ -12,13 +12,10 @@
 #include <vector>
 using namespace std;
 
-int solve_puzzle_1(){
+vector<int> read_file(){
 
     vector<int> numbers;
 
-    /* fstream file; */
-
-    /* file.open("expense-report.txt", ios::out); */
     ifstream file("expense-report.txt");
 
     if (file.is_open()){
@@ -39,27 +36,57 @@ int solve_puzzle_1(){
         cout << "Cannot open file." << endl;
     }
 
+    return numbers;
+
+}
+
+int solve_puzzle_1(){
+
+    vector<int> numbers = read_file();
+
     for (int i = 0; i < numbers.size(); i++){
         int number1 = numbers[i];
-        for (int j = i+1; j < numbers.size()-i-1; j++){
+        for (int j = i+1; j < numbers.size(); j++){
             int number2 = numbers[j];
 
             if (number1 + number2 == 2020){
                 return number1*number2;
             }
-
         }
     }
 
     return 0;
+}
 
+int solve_puzzle_2(){
+
+    vector<int> numbers = read_file();
+
+    for (int i = 0; i < numbers.size(); i++){
+        int number1 = numbers[i];
+        for (int j = i+1; j < numbers.size(); j++){
+            int number2 = numbers[j];
+            for (int k = j+1; k < numbers.size(); k++){
+                int number3 = numbers[k];
+
+                if (number1 + number2 + number3 == 2020){
+                    return number1*number2*number3;
+                }
+            }
+        }
+    }
+
+    return 0;
 }
 
 int main(int argc, char *argv[]){
 
     int result = solve_puzzle_1();
+    cout << "Puzzle 1:" << endl;
+    cout << result << endl;
 
-    cout << "Result:" << endl;
+    result = solve_puzzle_2();
+    cout << "Puzzle 2:" << endl;
     cout << result << endl;
 
     return 0;

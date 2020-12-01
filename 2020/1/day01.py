@@ -10,6 +10,7 @@ Created:
 
 """
 
+
 def read_expense_report():
     """Read the numbers if expense report."""
 
@@ -20,6 +21,7 @@ def read_expense_report():
             numbers.append(int(line.strip()))
 
     return numbers
+
 
 def solve_puzzle_1():
     """Find the two numbers that sum to 2020.
@@ -32,11 +34,11 @@ def solve_puzzle_1():
     numbers = read_expense_report()
 
     for i, number1 in enumerate(numbers):
-        for number2 in numbers[i+1:]:
+        for number2 in numbers[i + 1 :]:
             if number1 + number2 == 2020:
-                print(number1 * number2)
-                return number1*number2
-        
+                return number1 * number2
+
+
 def solve_puzzle_2():
     """Find the three numbers that sum to 2020.
 
@@ -48,14 +50,13 @@ def solve_puzzle_2():
     numbers = read_expense_report()
 
     for i, number1 in enumerate(numbers):
-        for j, number2 in enumerate(numbers[i+1:]):
-            for number3 in numbers[j+1:]:
+        for j, number2 in enumerate(numbers[i + 1 :]):
+            for number3 in numbers[j + 1 :]:
                 if number1 + number2 + number3 == 2020:
-                    print(number1 * number2 * number3)
-                    return number1*number2*number3
+                    return number1 * number2 * number3
 
-if __name__ == '__main__':
 
-    solve_puzzle_1()
-    solve_puzzle_2()
+if __name__ == "__main__":
 
+    print(f"Puzzle 1: {solve_puzzle_1()}")
+    print(f"Puzzle 2: {solve_puzzle_2()}")

@@ -28,10 +28,6 @@ vector<int> read_file(){
 
         file.close();
 
-        /* for (int i = 0; i < numbers.size() ; i++){ */
-        /*     cout << numbers[i] << endl; */
-        /* } */
-        
     } else {
         cout << "Cannot open file." << endl;
     }

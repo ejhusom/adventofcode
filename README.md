@@ -1,6 +1,6 @@
 # Advent of code 2020
 
-- [x] 1. Python
+- [x] 1. Python, C++
 - [ ] 2.
 - [ ] 3.
 - [ ] 4.

@@ -3,7 +3,7 @@
 ## 2020
 
 - [x] 1. Python, C++, JavaScript.
-- [ ] 2.
+- [x] 2. Python.
 - [ ] 3.
 - [ ] 4.
 - [ ] 5.

@@ -6,7 +6,7 @@ Author:
     Erik Johannes Husom
 
 Created:  
-    2020-09-18
+    2020-12-02
 
 """
 import numpy as np

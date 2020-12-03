@@ -4,7 +4,7 @@
 
 - [x] 1. Python, C++, JavaScript.
 - [x] 2. Python.
-- [ ] 3.
+- [x] 3. Python.
 - [ ] 4.
 - [ ] 5.
 - [ ] 6.
